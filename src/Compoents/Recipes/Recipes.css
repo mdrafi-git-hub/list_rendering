@@ -1,0 +1,87 @@
+
+body {
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* Container */
+.recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Individual recipe card */
+.recipe-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 350px;
+  padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4 / 3; /* Optional: keeps images consistent */
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.recipe-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Ingredients list */
+.recipe-card ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.recipe-card ul li {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  list-style-type: disc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .recipe-container {
+    padding: 20px 10px;
+  }
+
+  .recipe-card {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .recipe-card {
+    padding: 16px;
+  }
+
+  .recipe-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .recipe-card ul li {
+    font-size: 0.95rem;
+  }
+}
